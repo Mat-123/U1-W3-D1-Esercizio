@@ -11,26 +11,81 @@
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function pairNum(num) {
+  return num.filter((num) => num % 2 === 0);
+}
+
+console.log(pairNum(array));
+
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+/*
+function sumArray(array) {
+  let sum = 0;
 
+  array.forEach((num) => {
+    sum += num;
+  });
+}
+
+console.log(sum);
+
+*/
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+function sumes5(array) {
+  const initialValue = 0;
+  const sumWithInitial = array.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
+  return sumWithInitial;
+}
+
+console.log(sumes5(array));
+
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+
+let newArray = [];
+
+function function6(array, n) {
+  newArray = array.map((value) => value + n);
+  return newArray;
+}
+
+console.log(function6(array, 3));
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
+const stringArray = ["Mario", "Giovanni", "Paolo", "Luigi", "Pietro"];
+
+function lenghtString(stringArray) {
+  const lenght = stringArray.map((string) => string.length);
+  return length;
+}
+console.log(lenghtString(stringArray));
+
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+const newerArray = [];
+
+function ex8() {
+  for (let num = 1; num <= 99; num += 2) {
+    newerArray.push(num);
+  }
+  return newArray;
+}
+
+console.log(ex8());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -146,6 +201,10 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+
+function oldestFilm() {
+  forEach.movies.Year;
+}
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
